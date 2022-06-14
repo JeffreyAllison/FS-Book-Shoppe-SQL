@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS biblography;
 CREATE TABLE authors (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   full_name VARCHAR,
-  date_of_birth INT,
+  date_of_birth INT NOT NULL,
   place_of_birth VARCHAR
 );
 

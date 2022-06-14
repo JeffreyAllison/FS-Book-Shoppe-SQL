@@ -27,6 +27,7 @@ describe('authors routes', () => {
       full_name: 'Carl Rossi',
       date_of_birth: '1922-03-25',
       place_of_birth: 'Arlington, Texas',
+      id: '1',
     };
     expect(res.body).toEqual(carl);
   });
