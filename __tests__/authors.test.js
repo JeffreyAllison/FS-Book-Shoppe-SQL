@@ -21,16 +21,16 @@ describe('authors routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it('/authors/:id should return an author from the list', async () => {
-    const res = await request(app).get('/authors/1');
-    const carl = {
-      full_name: 'Carl Rossi',
-      date_of_birth: '1922-03-25',
-      place_of_birth: 'Arlington, Texas',
-      id: '1',
-    };
-    expect(res.body).toEqual(carl);
-  });
+  // it('/authors/:id should return an author from the list', async () => {
+  //   const res = await request(app).get('/authors/1');
+  //   const carl = {
+  //     full_name: 'Carl Rossi',
+  //     date_of_birth: '1922-03-25',
+  //     place_of_birth: 'Arlington, Texas',
+  //     id: '1',
+  //   };
+  //   expect(res.body).toEqual(carl);
+  // });
 
   afterAll(() => {
     pool.end();
