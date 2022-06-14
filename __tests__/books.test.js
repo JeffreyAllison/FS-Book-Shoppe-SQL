@@ -22,6 +22,8 @@ describe('books routes', () => {
     expect(res.body).toEqual(expected);
   });
 
+  // it('/books should return a book from the list');
+
   afterAll(() => {
     pool.end();
   });
