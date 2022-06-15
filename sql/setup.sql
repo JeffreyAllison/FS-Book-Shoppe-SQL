@@ -58,10 +58,22 @@ VALUES
 ('Our Last Book', 1977),
 ('Stone Guide', 1984);
 
--- INSERT INTO biblography (
---   author_id,
---   book_id
--- )
+INSERT INTO biblography (
+  author_id,
+  book_id
+)
 
--- VALUES
+VALUES
+(1, 10),
+(1, 2),
+(2, 1),
+(3, 3),
+(4, 9),
+(5, 7),
+(6, 11),
+(7, 4),
+(8, 6),
+(8, 8),
+(9, 10),
+(9, 5);
 
