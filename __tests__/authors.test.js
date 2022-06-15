@@ -19,7 +19,6 @@ describe('authors routes', () => {
       };
     });
     expect(res.body).toEqual(expected);
-    console.log(res.body);
   });
 
   it('/authors/:id should return an author from the list', async () => {

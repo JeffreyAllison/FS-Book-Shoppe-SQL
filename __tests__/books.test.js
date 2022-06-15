@@ -25,8 +25,9 @@ describe('books routes', () => {
   it('/books should return a book from the list', async () => {
     const res = await request(app).get('/books/1');
     const histories = {
+      id: '1',
       title: 'A History of Actual Histories',
-      released: 2000,
+      released_date: 2000,
     };
     expect(res.body).toEqual(histories);
   });
