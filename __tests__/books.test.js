@@ -30,7 +30,7 @@ describe('books routes', () => {
       released_date: 2000,
       authors: [
         {
-          id: '2',
+          id: 2,
           full_name: 'Apple Jack',
           date_of_birth: 1963,
           place_of_birth: 'Dar es Salaam, Tanzania',
