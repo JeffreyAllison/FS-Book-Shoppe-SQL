@@ -28,6 +28,18 @@ describe('authors routes', () => {
       date_of_birth: 1922,
       place_of_birth: 'Arlington, Texas',
       id: '1',
+      books: [
+        {
+          id: 10,
+          title: 'Our Last Book',
+          released_date: 1977,
+        },
+        {
+          id: 2,
+          title: 'A Stunning Compilation of Complications',
+          released_date: 1974,
+        },
+      ],
     };
     expect(res.body).toEqual(carl);
   });
