@@ -41,12 +41,11 @@ describe('books routes', () => {
   });
 
   it('POST /books should create a new book', async () => {
-    const addedBook = new Book({
+    const book = new Book({
       title: 'Ozra',
-      released_date: '1983',
+      released_date: 1983,
     });
-    const res = await request(app).post('/books').send(addedBook);
-    expect(res.body.id).toEqual(book.id);
+    const res = await request(app).post('/books').send(book);
     expect(res.body.title).toEqual(book.title);
     expect(res.body.released_date).toEqual(book.released_date);
     const count = await Book.count();
