@@ -44,6 +44,20 @@ describe('authors routes', () => {
     expect(res.body).toEqual(carl);
   });
 
+  it('POST /authors should create a new author', async () => {
+    const author = new Author({
+      full_name: 'Lena Hardin',
+      date_of_birth: 1979,
+      place_of_birth: 'Norman, Oklahoma',
+    });
+    const res = await request(app).post('/authors').send(author);
+    expect(res.body.full_name).toEqual(author.full_name);
+    expect(res.body.date_of_birth).toEqual(author.date_of_birth);
+    expect(res.body.place_of_birth).toEqual(author.place_of_birth);
+    const count = await Author.count();
+    expect(count).toEqual(10);
+  });
+
   afterAll(() => {
     pool.end();
   });
