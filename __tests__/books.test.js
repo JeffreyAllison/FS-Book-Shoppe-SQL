@@ -40,6 +40,19 @@ describe('books routes', () => {
     expect(res.body).toEqual(histories);
   });
 
+  it('POST /books should create a new book', async () => {
+    const addedBook = new Book({
+      title: 'Ozra',
+      released_date: '1983',
+    });
+    const res = await request(app).post('/books').send(addedBook);
+    expect(res.body.id).toEqual(book.id);
+    expect(res.body.title).toEqual(book.title);
+    expect(res.body.released_date).toEqual(book.released_date);
+    const count = await Book.count();
+    expect(count).toEqual(12);
+  });
+
   afterAll(() => {
     pool.end();
   });
